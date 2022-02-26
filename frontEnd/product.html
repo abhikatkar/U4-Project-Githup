@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <style>
+        #container1 {
+        /* border: 1px solid red; */
+        display: flex;
+        height: 65px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .b11 {
+        display: flex;
+        grid-gap: 18px;
+        font-size: 13px;
+        margin-left: 30px;
+      }
+      .b13 {
+        display: flex;
+        grid-gap: 18px;
+        font-size: 13px;
+        margin-right: 30px;
+      }
+
+      #search{
+        border: 1px solid black;
+        width: 450px;
+        height: 120px;
+        margin-left: 30px;
+        display:none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+
+
+/* --------------------------------------------------------------------   */
+        #box{
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 500px;
+            display: flex;
+            margin-top: 100px;
+        }
+        #b1{
+            /* border: 1px solid green; */
+            height: 100%;
+            width: 30%;
+            text-align: center; 
+        }
+        #b2{
+            /* border: 1px solid green; */
+            height: 100%;
+            width: 40%; 
+        }
+        #b3{
+            /* border: 1px solid green; */
+            height: 100%;
+            width: 30%; 
+        }
+
+        /* ----------------------------------------------------------------  */
+        /* ---------------------------------------------------------------  */
+
+      /* footer  */
+
+      #footer {
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 150px;
+        word-spacing: 30px;
+      }
+
+      #footer2 {
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 50px;
+        font-size: 12px;
+        text-align: center;
+        word-spacing: 30px;
+      }
+      .ft2 {
+        color: rgb(109, 109, 109);
+      }
+
+      /* --------------------------------------------------------------------  */
+    </style>
+</head>
+<body>
+
+
+    <!-- navbar -->
+
+    <div id="container1">
+        <div class="b11">
+          <p><a href="./menswear.html">MENSWEAR</a></p>
+          <p><a href="./womenswear.html">WOMENSWEAR</a></p>
+          <p><a href="">EVERYTHING ELSE</a></p>
+          <p><a href="">SALE</a></p>
+          <p onclick="search()">SEARCH</p>
+        </div>
+        <div class="b12">
+          <h1><a href="./home.html">SSENSE</a></h1>
+        </div>
+        <div class="b13">
+          <a href="">ENGLISH</a>
+          <a href="./login.html">LOGIN</a>
+          <a href="./signup.html">SIGNUP</a>
+          <a href="">WISHLIST</a>
+          <a href="">SHOPPING BAG (0)</a>
+        </div>
+      </div>
+  
+      <!-- ------------------------------------------------------------ -->
+      <!-- search box -->
+      <div id="search">
+      <a style="margin-left: 10px;" href="./menswear.html">MENSWEAR</a>
+      <a style="margin-left: 20px;" href="./womenswear.html">WOMENSWEAR</a>
+      <a style="margin-left: 20px;" href="">EVERYTHING ELSE</a>
+      <div style="display: flex; grid-gap: 15px;">
+        <input style="margin-top: 20px; margin-left: 20px; width: 300px; height: 35px;" type="search" >
+      <p onclick="s2()" style="margin-top: 25px;">CLOSE</p>
+      </div>
+      
+      </div>
+
+
+
+    <!-- ----------------------------------------------------------------------  -->
+    <div id="box">
+        <div id="b1"></div>
+        <div id="b2"></div>
+        <div onclick="payment()" id="b3">
+            <button style="width: 400px; height: 60px; margin-top: 200px; color: white; background-color: black; border-radius: 15px;">PROCEED TO CHECKOUT</button>
+        </div>
+
+    </div>
+
+
+
+    <!-- -------------------------------------------------------------  -->
+
+    <!-- footer  -->
+
+    <div id="footer">
+        <a href="">COUNTRY/REGION:INDIA</a>
+        <a href=""> NEWSLETTER SIGNUP</a>
+        <a href="">CUSTOMER CARE</a>
+        <a href="">LOCATION</a>
+        <a href="">EDITORIAL</a>
+        <a href="">ARCHIVE</a>
+        <a href="">CAREERS</a>
+        <a href="">AFFILIATES</a>
+        <a href="">SITEMAP</a>
+      </div>
+  
+      <div id="footer2">
+        <a class="ft2" href="">©2022ssense.com</a>
+        <a class="ft2" href="">Terms&Conditions</a>
+        <a class="ft2" href="">PrivacyPolicy</a>
+        <a class="ft2" href="">Cookies</a>
+        <a class="ft2" href="">Accessibility</a>
+      </div>
+</body>
+</html>
+
+<script>
+    let data = JSON.parse(localStorage.getItem("stored"));
+    let b1 = document.getElementById("b1");
+
+    let b2 = document.getElementById("b2");
+
+    function show(data){        
+        let div = document.createElement("div");
+
+        let maker = document.createElement("h4");
+        maker.textContent = data[0].maker;
+
+        let price =document.createElement("p");
+        price.textContent = data[0].price;
+
+        let title = document.createElement("p");
+        title.textContent = data[0].title;
+
+        div.append(maker,price,title);
+        b1.append(div);
+
+        let img = document.createElement("img");
+        img.src = data[0].img;
+
+        b2.append(img);
+    }
+
+    show(data);
+
+    function payment(){
+        window.location.href= "payment.html";
+    }
+</script>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>payment</title>
+    <style>
+      #container1 {
+        /* border: 1px solid red; */
+        display: flex;
+        height: 65px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .b11 {
+        display: flex;
+        grid-gap: 18px;
+        font-size: 13px;
+        margin-left: 30px;
+      }
+      .b13 {
+        display: flex;
+        grid-gap: 18px;
+        font-size: 13px;
+        margin-right: 30px;
+      }
+
+      #search {
+        border: 1px solid black;
+        width: 450px;
+        height: 120px;
+        margin-left: 30px;
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* ---------------------------------------------------------------  */
+
+      /* footer  */
+
+      #footer {
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 150px;
+        word-spacing: 30px;
+      }
+
+      #footer2 {
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 50px;
+        font-size: 12px;
+        text-align: center;
+        word-spacing: 30px;
+      }
+      .ft2 {
+        color: rgb(109, 109, 109);
+      }
+
+      /* --------------------------------------------------------------------  */
+
+      #b1 {
+        /* border: 1px solid red; */
+        width: 60%;
+        margin: auto;
+        margin-top: 70px;
+        height: 600px;
+      }
+
+      /* --------------------------------------------------------------------   */
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <div id="container1">
+      <div class="b11">
+        <p><a href="./menswear.html">MENSWEAR</a></p>
+        <p><a href="./womenswear.html">WOMENSWEAR</a></p>
+        <p><a href="">EVERYTHING ELSE</a></p>
+        <p><a href="">SALE</a></p>
+        <p onclick="search()">SEARCH</p>
+      </div>
+      <div class="b12">
+        <h1><a href="./home.html">SSENSE</a></h1>
+      </div>
+      <div class="b13">
+        <a href="">ENGLISH</a>
+        <a href="./login.html">LOGIN</a>
+        <a href="./signup.html">SIGNUP</a>
+        <a href="">WISHLIST</a>
+        <a href="">SHOPPING BAG (0)</a>
+      </div>
+    </div>
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- search box -->
+    <div id="search">
+      <a style="margin-left: 10px" href="./menswear.html">MENSWEAR</a>
+      <a style="margin-left: 20px" href="./womenswear.html">WOMENSWEAR</a>
+      <a style="margin-left: 20px" href="">EVERYTHING ELSE</a>
+      <div style="display: flex; grid-gap: 15px">
+        <input
+          style="
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 300px;
+            height: 35px;
+          "
+          type="search"
+        />
+        <p onclick="s2()" style="margin-top: 25px">CLOSE</p>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------  -->
+
+    <div id="b1">
+      <p>CRECKOUT</p>
+
+      <p>SHIPPING ADDRESS</p>
+      <hr />
+
+      <label for="">First Name</label>
+      <input
+        style="width: 250px; height: 30px; margin-top: 20px; margin-left: 10px"
+        type="text"
+      />
+
+      <label for="">Last Name</label>
+      <input
+        style="width: 250px; height: 30px; margin-top: 20px; margin-left: 10px"
+        type="text"
+      />
+      <br />
+
+      <label for="">Street Address</label>
+      <input
+        style="width: 250px; height: 30px; margin-top: 20px; margin-left: 10px"
+        type="text"
+      />
+
+      <label for="">Company (Optional)</label>
+      <input
+        style="width: 250px; height: 30px; margin-top: 20px; margin-left: 10px"
+        type="text"
+      />
+      <br />
+
+      <label for="">City</label>
+      <input
+        style="width: 250px; height: 30px; margin-top: 20px; margin-left: 10px"
+        type="text"
+      />
+
+      <label for="">Phone</label>
+      <input
+        style="width: 250px; height: 30px; margin-top: 20px; margin-left: 10px"
+        type="text"
+      />
+      <br />
+
+      <hr />
+
+      <p>CARD DETAILS</p>
+      <label for="">Card Number</label>
+      <input
+        style="width: 250px; height: 30px; margin-top: 20px; margin-left: 10px"
+        type="text"
+        placeholder="1234 1234 1234 1234"
+      />
+
+      <label for="">Expiration date</label>
+      <input
+        style="width: 70px; height: 30px; margin-top: 20px; margin-left: 10px"
+        type="text"
+        placeholder="MM / YY"
+      />
+      <br />
+
+      <label for="">Cardholder's name</label>
+      <input
+        style="width: 250px; height: 30px; margin-top: 20px; margin-left: 10px"
+        type="text"
+      />
+
+      <label for="">Security code</label>
+      <input
+        style="width: 70px; height: 30px; margin-top: 20px; margin-left: 10px"
+        type="text"
+        placeholder="CVC"
+      />
+      <br />
+
+      <hr />
+      <button
+        onclick="end()"
+        style="
+          margin-top: 30px;
+          margin-left: 200px;
+          width: 300px;
+          height: 40px;
+          background-color: black;
+          color: white;
+        "
+      >
+        PLACE ORDER
+      </button>
+    </div>
+
+    <!-- -------------------------------------------------------------  -->
+
+    <!-- footer  -->
+
+    <div id="footer">
+      <a href="">COUNTRY/REGION:INDIA</a>
+      <a href=""> NEWSLETTER SIGNUP</a>
+      <a href="">CUSTOMER CARE</a>
+      <a href="">LOCATION</a>
+      <a href="">EDITORIAL</a>
+      <a href="">ARCHIVE</a>
+      <a href="">CAREERS</a>
+      <a href="">AFFILIATES</a>
+      <a href="">SITEMAP</a>
+    </div>
+
+    <div id="footer2">
+      <a class="ft2" href="">©2022ssense.com</a>
+      <a class="ft2" href="">Terms&Conditions</a>
+      <a class="ft2" href="">PrivacyPolicy</a>
+      <a class="ft2" href="">Cookies</a>
+      <a class="ft2" href="">Accessibility</a>
+    </div>
+  </body>
+</html>
+
+<script>
+  function end() {
+    alert("ORDER PLACED");
+    window.location.href = "home.html";
+  }
+</script>

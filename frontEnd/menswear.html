@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menswear</title>
+    <style>
+      /* navbar  */
+      #container1 {
+        /* border: 1px solid red; */
+        display: flex;
+        height: 65px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .b11 {
+        display: flex;
+        grid-gap: 18px;
+        font-size: 13px;
+        margin-left: 30px;
+      }
+      .b13 {
+        display: flex;
+        grid-gap: 18px;
+        font-size: 13px;
+        margin-right: 30px;
+      }
+
+      /* ---------------------------------------------------------------  */
+
+      /* footer  */
+
+      #footer {
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 250px;
+        word-spacing: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      #footer2 {
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 50px;
+        font-size: 12px;
+        text-align: center;
+        word-spacing: 30px;
+      }
+      .ft2 {
+        color: rgb(109, 109, 109);
+      }
+
+      /* --------------------------------------------------------------------  */
+
+      #main {
+        display: flex;
+      }
+      #left {
+        /* border: 1px solid red; */
+        width: 20%;
+      }
+      #centre {
+        /* border: 1px solid red; */
+        width: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 40px;
+      }
+      img {
+        width: 260px;
+        /* height: 300px; */
+      }
+      #right {
+        /* border: 1px solid red; */
+        width: 15%;
+        /* height: 200px; */
+      }
+
+      #box1 {
+        /* border: 1px solid black; */
+        width: 30%;
+      }
+      .space {
+        margin-top: -15px;
+      }
+      /* -----------------------------------------------------------------------  */
+      #search{
+        border: 1px solid black;
+        width: 450px;
+        height: 120px;
+        margin-left: 30px;
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar  -->
+    <div id="container1">
+      <div class="b11">
+        <p><a href="./menswear.html">MENSWEAR</a></p>
+        <p><a href="./womenswear.html">WOMENSWEAR</a></p>
+        <p><a href="">EVERYTHING ELSE</a></p>
+        <p><a href="">SALE</a></p>
+        <p onclick="search()">SEARCH</p>
+      </div>
+      <div class="b12">
+        <h1><a href="./home.html">SSENSE</a></h1>
+      </div>
+      <div class="b13">
+        <a href="">ENGLISH</a>
+        <a href="./login.html">LOGIN</a>
+        <a href="./signup.html">SIGNUP</a>
+        <a href="">WISHLIST</a>
+        <a href="">SHOPPING BAG (0)</a>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------------------  -->
+
+
+    <!-- search box -->
+    <div id="search">
+      <a style="margin-left: 10px;" href="./menswear.html">MENSWEAR</a>
+      <a style="margin-left: 20px;" href="./womenswear.html">WOMENSWEAR</a>
+      <a style="margin-left: 20px;" href="">EVERYTHING ELSE</a>
+      <div style="display: flex; grid-gap: 15px;">
+        <input style="margin-top: 20px; margin-left: 20px; width: 300px; height: 35px;" type="search" >
+      <p onclick="s2()" style="margin-top: 25px;">CLOSE</p>
+      </div>
+      
+      </div>
+
+
+
+    <!-- ----------------------------------------------------------------  -->
+
+    <div id="main">
+      <div id="left">
+        <div style="margin: auto; width: 60%">
+
+
+          <h3 id="sale">SALES</h3>
+
+
+          <h3 style="margin-top: 35px"><a href="">ALL CATEGORIES</a></h3>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">ACCESSORIES</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">BAGS</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">CLOTHING</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">SHOES</a></p>
+
+          <h3 style="margin-top: 35px"><a href="">ALL DESIGNERS</a></h3>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">032c</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">1017 ALYX 9SM</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">11 by Boris Bidjan Saberi</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">132 5. ISSEY MIYAKE</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">3.1 Phillip Lim</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">3MAN</a></p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">424</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">44 Label Group</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">4SDESIGNS</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">99% IS</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">A BETTER FEELING</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">A-COLD-WALL</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">A. A. Spectrum</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">A.P.C.</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">AAPE by A Bathing Ape</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Acne Studios</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">ACRONYM</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">ADER error</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">adidas Originals</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">adidas x Human Made</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">adidas x Humanrace by Pharrell Williams</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">adidas x IVY PARK</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">Adieu</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Advisory Board Crystals</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">ADYAR</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">AFFXWRKS</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Agnona</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">AGR</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Ahluwalia</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">AïE</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Aitor Throup’s TheDSA</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Alan Crocetti</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Alchemist</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Alexander McQueen</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Alighieri</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">All Blues</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">AMBUSH</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">AMI Alexandre Mattiussi</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">AMIRI</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">AMOMENTO and wander</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Andersson Bell</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Ann Demeulemeester</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Another Aspect</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">Aries</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Arnar Már Jónsson</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Ashley Williams</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">Asics</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">AURALEE</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Awake NY</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Axel Arigato</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Aztech Mountain</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Balenciaga</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Bally Hike</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Balmain</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Bao Bao Issey Miyake</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">BAPE</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Barbour</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Barena</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Bather</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">BEAMS PLUS</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">BED J.W. FORD</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Belstaff</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Benjamin Edgar</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Bethany Williams</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Bianca Saunders</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Billionaire Boys Club</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Birkenstock</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Blackmerle</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Yuichi Toyama</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Yuki Hashimoto</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Yves Salomon</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Yves Salomon - Army</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Z Zegna</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">ZEGNA</a></p>
+        </div>
+      </div>
+      <div id="centre"></div>
+      <div id="right">
+        <div style="margin: auto; width: 60%">
+          <h3 style="margin-top: 35px"><a href="">COLORS</a></h3>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">ALL COLORS</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">Black</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">CLOTHING</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">Blue</a></p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">Brown</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Burgundy</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">Navy</a></p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">Green</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Orange</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">Pink</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Purple</a>
+          </p>
+          <p style="margin-top: -10px; font-size: 12px"><a href=""> Red</a></p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">Tan</a></p>
+          <p style="margin-top: -10px; font-size: 12px"><a href="">White</a></p>
+          <p style="margin-top: -10px; font-size: 12px">
+            <a href="">Yellow</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------------------------  -->
+
+    <!-- footer  -->
+
+    <div id="footer">
+      <a href="">COUNTRY/REGION:INDIA</a>
+      <a href=""> NEWSLETTER SIGNUP</a>
+      <a href="">CUSTOMER CARE</a>
+      <a href="">LOCATION</a>
+      <a href="">EDITORIAL</a>
+      <a href="">ARCHIVE</a>
+      <a href="">CAREERS</a>
+      <a href="">AFFILIATES</a>
+      <a href="">SITEMAP</a>
+    </div>
+
+    <div id="footer2">
+      <a class="ft2" href="">©2022ssense.com</a>
+      <a class="ft2" href="">Terms&Conditions</a>
+      <a class="ft2" href="">PrivacyPolicy</a>
+      <a class="ft2" href="">Cookies</a>
+      <a class="ft2" href="">Accessibility</a>
+    </div>
+  </body>
+</html>
+
+<script>
+  let container = document.getElementById("centre");
+
+  let store = [];
+
+  let c= 0;
+
+  let sale = document.getElementById("sale").addEventListener("click", async()=>{
+    try{
+      const res = await fetch(`http://localhost:3444/men?price=500`);
+      const data = await res.json();
+
+      console.log("data",data);
+      appendProduct(data);
+      c=1;
+    }catch(err){
+      console.log("err:",err)
+    }
+  })
+
+
+  // fetch API
+  let url = "http://localhost:3444/men";
+
+  async function getProduct() {
+    try {
+      if(c===0){
+        const res = await fetch(url);
+      const data = await res.json();
+
+      console.log("data", data);
+
+      appendProduct(data);
+      }
+    } catch (err) {
+      console.log("err", err);
+    }
+  }
+
+
+  
+  
+  function appendProduct(product) {
+    container.innerHTML="";
+    product.map(function (p) {
+      let main = document.createElement("div");
+      main.setAttribute("id", "box1");
+      main.addEventListener("click", function (){
+       getData(p.img,p.maker,p.price,p.title,);
+       window.location.href = "product.html";
+      })
+      
+
+      let img = document.createElement("img");
+      img.src = p.img;
+
+      let maker = document.createElement("h4");
+      maker.textContent = p.maker;
+      // maker.setAttribute("class", "space")
+
+      let price = document.createElement("p");
+      price.textContent = p.price;
+      price.setAttribute("class", "space");
+
+      let des = document.createElement("p");
+      des.innerText = p.title;
+      des.setAttribute("class", "space");
+
+      main.append(img, maker, des, price);
+      container.append(main);
+    });
+  }
+
+  getProduct();
+
+
+  function getData(img,maker,price,title){
+    let   storeData = {
+      img:img,
+      maker:maker,
+      price:price,
+      title:title
+    };
+    store.push(storeData);
+    localStorage.setItem("stored", JSON.stringify(store));
+  }
+
+
+
+
+
+
+ 
+  function search(){
+    let s = document.getElementById("search").style.display="block";
+  }
+  function s2(){
+    let s = document.getElementById("search").style.display="none";
+
+  }
+
+</script>

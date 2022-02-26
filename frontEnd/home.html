@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <script
+      src="https://kit.fontawesome.com/44e7379461.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #container1 {
+        /* border: 1px solid red; */
+        display: flex;
+        height: 65px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .b11 {
+        display: flex;
+        grid-gap: 18px;
+        font-size: 13px;
+        margin-left: 30px;
+      }
+      .b13 {
+        display: flex;
+        grid-gap: 18px;
+        font-size: 13px;
+        margin-right: 30px;
+      }
+      /* ----------------------------------------------------------------- */
+
+      #container2 {
+        /* border: 1px solid red; */
+        display: flex;
+        width: 85%;
+        margin: auto;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-top: 20px;
+        grid-gap: 10px;
+      }
+      .b21 {
+        font-size: 13px;
+        margin-left: 30px;
+        font-size: 15px;
+        line-height: 10px;
+      }
+      .b22 {
+        font-size: 13px;
+        margin-right: 30px;
+        font-size: 15px;
+        line-height: 10px;
+      }
+
+      /* ------------------------------------------------------------ */
+
+      #container3 {
+        /* border: 1px solid red; */
+        display: flex;
+        width: 95%;
+        margin: auto;
+        margin-top: 60px;
+        grid-gap: 3px;
+        justify-content: space-between;
+      }
+
+      .b31 {
+        font-size: 13px;
+        margin-right: 30px;
+        font-size: 15px;
+        line-height: 15px;
+      }
+
+      .b32 {
+        font-size: 13px;
+        margin-right: 30px;
+        font-size: 15px;
+        line-height: 18px;
+      }
+      .b33 {
+        font-size: 13px;
+        margin-right: 30px;
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+      /* -----------------------------------------------------------  */
+
+      #container4 {
+        /* border: 1px solid red; */
+        width: 95%;
+        height: 150px;
+        margin: auto;
+        margin-top: 50px;
+        display: flex;
+        grid-gap: 15px;
+      }
+
+      .b41 {
+        /* border: 1px solid black; */
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 280px;
+      }
+      .b42 {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 280px;
+        display: flex;
+        grid-gap: 10px;
+      }
+      .b43 {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 280px;
+        display: flex;
+        grid-gap: 10px;
+      }
+      .b44 {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 280px;
+        display: flex;
+        grid-gap: 10px;
+      }
+      .b45 {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 280px;
+        display: flex;
+        grid-gap: 10px;
+      }
+
+      /* -------------------------------------------------------------  */
+
+      #container5 {
+        /* border: 1px solid red; */
+        width: 70%;
+        height: 250px;
+        font-size: 100px;
+        margin: auto;
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      #container6 {
+        /* border: 1px solid red; */
+        width: 100%;
+        margin: auto;
+        height: 200px;
+        font-size: 65px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      #button {
+        margin: auto;
+        /* border: 1px solid red; */
+        width: 15%;
+        height: 50px;
+      }
+      .but1 {
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: white;
+      }
+
+      /* --------------------------------------------------------------------------- */
+
+      #footer {
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 100px;
+        word-spacing: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      #footer2 {
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 50px;
+        font-size: 12px;
+        text-align: center;
+        word-spacing: 30px;
+      }
+      .ft2 {
+        color: rgb(109, 109, 109);
+      }
+      /* ------------------------------------------------  */
+
+      #search{
+        border: 1px solid black;
+        width: 450px;
+        height: 120px;
+        margin-left: 30px;
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ----------------------------------------------------------------- -->
+
+    <!-- navbar -->
+
+    <div id="container1">
+      <div class="b11">
+        <p><a href="./menswear.html">MENSWEAR</a></p>
+        <p><a href="./womenswear.html">WOMENSWEAR</a></p>
+        <p><a href="">EVERYTHING ELSE</a></p>
+        <p><a href="">SALE</a></p>
+        <p onclick="search()">SEARCH</p>
+      </div>
+      <div class="b12">
+        <h1><a href="./home.html">SSENSE</a></h1>
+      </div>
+      <div class="b13">
+        <a href="">ENGLISH</a>
+        <a href="./login.html">LOGIN</a>
+        <a href="./signup.html">SIGNUP</a>
+        <a href="">WISHLIST</a>
+        <a href="">SHOPPING BAG (0)</a>
+      </div>
+    </div>
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- search box -->
+    <div id="search">
+    <a style="margin-left: 10px;" href="./menswear.html">MENSWEAR</a>
+    <a style="margin-left: 20px;" href="./womenswear.html">WOMENSWEAR</a>
+    <a style="margin-left: 20px;" href="">EVERYTHING ELSE</a>
+    <div style="display: flex; grid-gap: 15px;">
+      <input style="margin-top: 20px; margin-left: 20px; width: 300px; height: 35px;" type="search" >
+    <p onclick="s2()" style="margin-top: 25px;">CLOSE</p>
+    </div>
+    
+    </div>
+
+    <!-- box 2  -->
+
+    <div id="container2">
+      <div class="b21">
+        <img
+          style="width: 600px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1645025234/ypyiv4ztukkndqzti3mk.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >Culture
+          </span>
+          THE SEAN BROWN REMIX
+        </h2>
+        <p>Designing A Dream Space with All the Right Rhythm</p>
+      </div>
+      <div class="b22">
+        <img
+          style="width: 600px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1644862462/ag2pynqb7i9ibwwxva4q.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >Culture</span
+          >
+          ALL THE CAMERAS INSIDE MY HOUSE
+        </h2>
+        <p>A To-Do List For Remaining Unseen</p>
+      </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------- -->
+
+    <!-- box 3 -->
+
+    <div id="container3">
+      <div class="b31">
+        <img
+          style="width: 450px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1644516442/n8hgqymjqqg3k2mxfcih.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >RECENT
+          </span>
+          ME-TIME ESSENTIALS
+        </h2>
+        <p>Market Feb 14</p>
+      </div>
+      <div class="b32">
+        <img
+          style="width: 450px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1644362998/l7pjdy3ib1p8a0skm83d.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)">RECENT</span>
+          WHEN THE TOWER FALLS: REDESIGNING A LIFE THROUGH TAROT
+        </h2>
+        <p>Culture Feb 11</p>
+      </div>
+      <div class="b33">
+        <img
+          style="width: 450px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1644252200/buf3t8mb8ntcpq1wr9sv.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >RECENT
+          </span>
+          MADE IN VAIN: A TAXONOMY OF EYE-OPENING BEAUTY DESIGN
+        </h2>
+        <p>Culture Feb 9</p>
+      </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------  -->
+
+    <!-- box 2 copy  -->
+
+    <div id="container2">
+      <div class="b21">
+        <img
+          style="width: 600px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1645455931/xixvfycvmntbhs9orcew.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >Featured
+          </span>
+          VERSACE JEANS COUTURE
+        </h2>
+        <button
+          style="
+            width: 200px;
+            height: 45px;
+            border-radius: 10px;
+            background-color: white;
+          "
+        >
+          SHOP MENSWEAR
+        </button>
+      </div>
+      <div class="b22">
+        <img
+          style="width: 600px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1645455936/yabvc1uaivvv6cqr2kfy.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >Featured</span
+          >
+          VERSACE JEANS COUTURE
+        </h2>
+        <button
+          style="
+            width: 200px;
+            height: 45px;
+            border-radius: 10px;
+            background-color: white;
+          "
+        >
+          SHOP MENSWEAR
+        </button>
+      </div>
+    </div>
+
+    <!-- -----------------------------------------------------------------  -->
+
+    <!-- box 4  -->
+
+    <div id="container4">
+      <div class="b41">
+        <h1 style="font-size: 40px; line-height: 36px">CHASING LIGHT</h1>
+        <p>VIEW ALL STORIES</p>
+      </div>
+      <div class="b42">
+        <div>
+          <img
+            style="width: 100px; height: 130px; margin-top: 7px"
+            src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1630507757/bafd1fcaut0u92pqn0pj.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>Out in the Street with Joel Meyerowitz</p>
+          <p style="margin-top: 50px">Art</p>
+        </div>
+      </div>
+      <div class="b43">
+        <div>
+          <img
+            style="width: 100px; height: 130px; margin-top: 7px"
+            src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1619540298/uyfv6bmzj8vgpvwjhsou.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>Out in the Street with Joel Meyerowitz</p>
+          <p style="margin-top: 50px">Art</p>
+        </div>
+      </div>
+      <div class="b44">
+        <div>
+          <img
+            style="width: 100px; height: 130px; margin-top: 7px"
+            src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1604004180/arvpz3ehjyn7jlum4o93.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>Out in the Street with Joel Meyerowitz</p>
+          <p style="margin-top: 50px">Art</p>
+        </div>
+      </div>
+      <div class="b45">
+        <div>
+          <img
+            style="width: 100px; height: 130px; margin-top: 7px"
+            src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1594413654/uoszh4w3nksemg3p3ehx.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>Out in the Street with Joel Meyerowitz</p>
+          <p style="margin-top: 50px">Art</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------------------------  -->
+
+    <!-- box 2 copy  -->
+
+    <div id="container2">
+      <div class="b21">
+        <img
+          style="width: 600px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1591098045/rmku32i48ohhvrds1w3j.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >Culture
+          </span>
+          THE SEAN BROWN REMIX
+        </h2>
+        <p>Designing A Dream Space with All the Right Rhythm</p>
+      </div>
+      <div class="b22">
+        <img
+          style="width: 600px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1643918998/mtvmbkbpnmhu71b7ahme.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >Culture</span
+          >
+          ALL THE CAMERAS INSIDE MY HOUSE
+        </h2>
+        <p>A To-Do List For Remaining Unseen</p>
+      </div>
+    </div>
+
+    <!-- -----------------------------------------------------  -->
+
+    <div id="container5">The Oral History of Apartamento</div>
+
+    <div id="container6">
+      THE INSIDE STORY OF EVERYONE’S FAVORITE INTERIORS MAGAZINE
+    </div>
+
+    <div id="button">
+      <button class="but1">VIEW EDITORIAL</button>
+    </div>
+
+    <!-- ----------------------------------------------------------------  -->
+
+    <!-- box 3 copy  -->
+
+    <div id="container3">
+      <div class="b31">
+        <img
+          style="width: 450px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1643047790/l1qxhbkqmk7j3zrx26tb.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >RECENT
+          </span>
+          ME-TIME ESSENTIALS
+        </h2>
+        <p>Market Feb 14</p>
+      </div>
+      <div class="b32">
+        <img
+          style="width: 450px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1642175441/ibezpp5orbak1tpieffv.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)">RECENT</span>
+          WHEN THE TOWER FALLS: REDESIGNING A LIFE THROUGH TAROT
+        </h2>
+        <p>Culture Feb 11</p>
+      </div>
+      <div class="b33">
+        <img
+          style="width: 450px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1641839958/oks77kv3djnbjvfserxc.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >RECENT
+          </span>
+          MADE IN VAIN: A TAXONOMY OF EYE-OPENING BEAUTY DESIGN
+        </h2>
+        <p>Culture Feb 9</p>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------------------------------  -->
+
+    <!-- box 4 copy  -->
+
+    <div id="container4">
+      <div class="b41">
+        <h1 style="font-size: 40px; line-height: 36px">CHASING LIGHT</h1>
+        <p>VIEW ALL STORIES</p>
+      </div>
+      <div class="b42">
+        <div>
+          <img
+            style="width: 100px; height: 130px; margin-top: 7px"
+            src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1600876820/ok4to9doypwylhsoq1lo.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>Out in the Street with Joel Meyerowitz</p>
+          <p style="margin-top: 50px">Art</p>
+        </div>
+      </div>
+      <div class="b43">
+        <div>
+          <img
+            style="width: 100px; height: 130px; margin-top: 7px"
+            src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1606866817/edce3snwauq79kubdiur.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>Out in the Street with Joel Meyerowitz</p>
+          <p style="margin-top: 50px">Art</p>
+        </div>
+      </div>
+      <div class="b44">
+        <div>
+          <img
+            style="width: 100px; height: 130px; margin-top: 7px"
+            src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1625232137/wy35fpvlk9oju2oaqfio.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>Out in the Street with Joel Meyerowitz</p>
+          <p style="margin-top: 50px">Art</p>
+        </div>
+      </div>
+      <div class="b45">
+        <div>
+          <img
+            style="width: 100px; height: 130px; margin-top: 7px"
+            src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1618511656/x1nq39rzrge3jqjpt3lu.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>Out in the Street with Joel Meyerowitz</p>
+          <p style="margin-top: 50px">Art</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------  -->
+
+    <!-- box 3 copy  -->
+
+    <div id="container3">
+      <div class="b31">
+        <img
+          style="width: 450px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1641487445/d1duebjheyy3z5u4thpq.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >RECENT
+          </span>
+          ME-TIME ESSENTIALS
+        </h2>
+        <p>Market Feb 14</p>
+      </div>
+      <div class="b32">
+        <img
+          style="width: 450px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1640203419/nyzxkf3mjilkzjkgmmw3.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)">RECENT</span>
+          WHEN THE TOWER FALLS: REDESIGNING A LIFE THROUGH TAROT
+        </h2>
+        <p>Culture Feb 11</p>
+      </div>
+      <div class="b33">
+        <img
+          style="width: 450px"
+          src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1640193313/n1zwoktbizq9uduy8seu.jpg"
+          alt=""
+        />
+        <h2>
+          <span style="font-size: 13px; color: rgb(158, 158, 158)"
+            >RECENT
+          </span>
+          MADE IN VAIN: A TAXONOMY OF EYE-OPENING BEAUTY DESIGN
+        </h2>
+        <p>Culture Feb 9</p>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------------------------  -->
+
+    <!-- footer  -->
+
+    <div id="footer">
+      <a href="">COUNTRY/REGION:INDIA</a>
+      <a href=""> NEWSLETTER SIGNUP</a>
+      <a href="">CUSTOMER CARE</a>
+      <a href="">LOCATION</a>
+      <a href="">EDITORIAL</a>
+      <a href="">ARCHIVE</a>
+      <a href="">CAREERS</a>
+      <a href="">AFFILIATES</a>
+      <a href="">SITEMAP</a>
+    </div>
+
+    <div id="footer2">
+      <a class="ft2" href="">©2022ssense.com</a>
+      <a class="ft2" href="">Terms&Conditions</a>
+      <a class="ft2" href="">PrivacyPolicy</a>
+      <a class="ft2" href="">Cookies</a>
+      <a class="ft2" href="">Accessibility</a>
+    </div>
+  </body>
+</html>
+
+
+<script>
+  function search(){
+    let s = document.getElementById("search").style.display="block";
+  }
+  function s2(){
+    let s = document.getElementById("search").style.display="none";
+
+  }
+</script>
