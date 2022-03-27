@@ -1,9 +1,9 @@
 const express = require("express");
 
-const connect = require("../src/configs/db");
+const connect = require("./src/configs/db");
 
-const menController = require("../src/controller/men.controller");
-const womenController = require("../src/controller/women.controller");
+const menController = require("./src/controller/men.controller");
+const womenController = require("./src/controller/women.controller");
 
 const app = express();
 
