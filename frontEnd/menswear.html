@@ -91,12 +91,12 @@
         margin-top: -15px;
       }
       /* -----------------------------------------------------------------------  */
-      #search{
+      #search {
         border: 1px solid black;
         width: 450px;
         height: 120px;
         margin-left: 30px;
-        display:none;
+        display: none;
       }
     </style>
   </head>
@@ -124,30 +124,31 @@
 
     <!-- --------------------------------------------------------------------  -->
 
-
     <!-- search box -->
     <div id="search">
-      <a style="margin-left: 10px;" href="./menswear.html">MENSWEAR</a>
-      <a style="margin-left: 20px;" href="./womenswear.html">WOMENSWEAR</a>
-      <a style="margin-left: 20px;" href="">EVERYTHING ELSE</a>
-      <div style="display: flex; grid-gap: 15px;">
-        <input style="margin-top: 20px; margin-left: 20px; width: 300px; height: 35px;" type="search" >
-      <p onclick="s2()" style="margin-top: 25px;">CLOSE</p>
+      <a style="margin-left: 10px" href="./menswear.html">MENSWEAR</a>
+      <a style="margin-left: 20px" href="./womenswear.html">WOMENSWEAR</a>
+      <a style="margin-left: 20px" href="">EVERYTHING ELSE</a>
+      <div style="display: flex; grid-gap: 15px">
+        <input
+          style="
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 300px;
+            height: 35px;
+          "
+          type="search"
+        />
+        <p onclick="s2()" style="margin-top: 25px">CLOSE</p>
       </div>
-      
-      </div>
-
-
+    </div>
 
     <!-- ----------------------------------------------------------------  -->
 
     <div id="main">
       <div id="left">
         <div style="margin: auto; width: 60%">
-
-
           <h3 id="sale">SALES</h3>
-
 
           <h3 style="margin-top: 35px"><a href="">ALL CATEGORIES</a></h3>
           <p style="margin-top: -10px; font-size: 12px">
@@ -426,53 +427,52 @@
 
   let store = [];
 
-  let c= 0;
+  let c = 0;
 
-  let sale = document.getElementById("sale").addEventListener("click", async()=>{
-    try{
-      const res = await fetch(`http://localhost:3444/men?price=500`);
-      const data = await res.json();
+  let sale = document
+    .getElementById("sale")
+    .addEventListener("click", async () => {
+      try {
+        const res = await fetch(
+          `https://ssense-chrome.herokuapp.com/men?price=500`
+        );
+        const data = await res.json();
 
-      console.log("data",data);
-      appendProduct(data);
-      c=1;
-    }catch(err){
-      console.log("err:",err)
-    }
-  })
-
+        console.log("data", data);
+        appendProduct(data);
+        c = 1;
+      } catch (err) {
+        console.log("err:", err);
+      }
+    });
 
   // fetch API
-  let url = "http://localhost:3444/men";
+  let url = `https://ssense-chrome.herokuapp.com/men`;
 
   async function getProduct() {
     try {
-      if(c===0){
+      if (c === 0) {
         const res = await fetch(url);
-      const data = await res.json();
+        const data = await res.json();
 
-      console.log("data", data);
+        // console.log("data", data);
 
-      appendProduct(data);
+        appendProduct(data);
       }
     } catch (err) {
       console.log("err", err);
     }
   }
 
-
-  
-  
   function appendProduct(product) {
-    container.innerHTML="";
+    container.innerHTML = "";
     product.map(function (p) {
       let main = document.createElement("div");
       main.setAttribute("id", "box1");
-      main.addEventListener("click", function (){
-       getData(p.img,p.maker,p.price,p.title,);
-       window.location.href = "product.html";
-      })
-      
+      main.addEventListener("click", function () {
+        getData(p.img, p.maker, p.price, p.title);
+        window.location.href = "product.html";
+      });
 
       let img = document.createElement("img");
       img.src = p.img;
@@ -496,30 +496,21 @@
 
   getProduct();
 
-
-  function getData(img,maker,price,title){
-    let   storeData = {
-      img:img,
-      maker:maker,
-      price:price,
-      title:title
+  function getData(img, maker, price, title) {
+    let storeData = {
+      img: img,
+      maker: maker,
+      price: price,
+      title: title,
     };
     store.push(storeData);
     localStorage.setItem("stored", JSON.stringify(store));
   }
 
-
-
-
-
-
- 
-  function search(){
-    let s = document.getElementById("search").style.display="block";
+  function search() {
+    let s = (document.getElementById("search").style.display = "block");
   }
-  function s2(){
-    let s = document.getElementById("search").style.display="none";
-
+  function s2() {
+    let s = (document.getElementById("search").style.display = "none");
   }
-
 </script>
