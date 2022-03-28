@@ -196,12 +196,12 @@
       }
       /* ------------------------------------------------  */
 
-      #search{
+      #search {
         border: 1px solid black;
         width: 450px;
         height: 120px;
         margin-left: 30px;
-        display:none;
+        display: none;
       }
     </style>
   </head>
@@ -219,7 +219,7 @@
         <p onclick="search()">SEARCH</p>
       </div>
       <div class="b12">
-        <h1><a href="./home.html">SSENSE</a></h1>
+        <h1><a href="./index.html">SSENSE</a></h1>
       </div>
       <div class="b13">
         <a href="">ENGLISH</a>
@@ -233,14 +233,21 @@
     <!-- ------------------------------------------------------------ -->
     <!-- search box -->
     <div id="search">
-    <a style="margin-left: 10px;" href="./menswear.html">MENSWEAR</a>
-    <a style="margin-left: 20px;" href="./womenswear.html">WOMENSWEAR</a>
-    <a style="margin-left: 20px;" href="">EVERYTHING ELSE</a>
-    <div style="display: flex; grid-gap: 15px;">
-      <input style="margin-top: 20px; margin-left: 20px; width: 300px; height: 35px;" type="search" >
-    <p onclick="s2()" style="margin-top: 25px;">CLOSE</p>
-    </div>
-    
+      <a style="margin-left: 10px" href="./menswear.html">MENSWEAR</a>
+      <a style="margin-left: 20px" href="./womenswear.html">WOMENSWEAR</a>
+      <a style="margin-left: 20px" href="">EVERYTHING ELSE</a>
+      <div style="display: flex; grid-gap: 15px">
+        <input
+          style="
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 300px;
+            height: 35px;
+          "
+          type="search"
+        />
+        <p onclick="s2()" style="margin-top: 25px">CLOSE</p>
+      </div>
     </div>
 
     <!-- box 2  -->
@@ -669,13 +676,11 @@
   </body>
 </html>
 
-
 <script>
-  function search(){
-    let s = document.getElementById("search").style.display="block";
+  function search() {
+    let s = (document.getElementById("search").style.display = "block");
   }
-  function s2(){
-    let s = document.getElementById("search").style.display="none";
-
+  function s2() {
+    let s = (document.getElementById("search").style.display = "none");
   }
 </script>
