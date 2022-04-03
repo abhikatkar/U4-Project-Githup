@@ -1,6 +1,6 @@
 const express = require("express");
 
-const Connect = require("./src/configs/db");
+const connect = require("./src/configs/db");
 
 const menController = require("./src/controller/men.controller");
 const womenController = require("./src/controller/women.controller");
@@ -13,7 +13,7 @@ app.use("/women", womenController);
 
 app.listen(process.env.PORT || 3444, async()=>{
     try{
-       await Connect ();
+       await connect ();
         console.log("listening on port 3444")
 
     }catch(err){
