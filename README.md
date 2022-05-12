@@ -10,7 +10,7 @@ Its clone of SSENSE app. SSENSE is E-commerce website. Shop from 500+ luxury lab
 - CSS
 - JavaScript
 - NodeJs
-- Express
+- Express.js
 - MongoDb
 
 
